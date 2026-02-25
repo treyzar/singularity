@@ -57,14 +57,13 @@ body {
 }
 
 .gallery {
-    /* Выключает точки у списка */
     list-style-type: none;
     margin: 173px auto;
-    max-width: 1232px;
+    max-width: 1060px;
     padding: 0 16px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
 }
 
 .gallery__item {
@@ -72,6 +71,13 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    flex: 0 0 calc((100% - 70px) / 3);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .gallery__item {
+        flex: 0 0 calc((100% - 35px) / 2);
+    }
 }
 
 .gallery__overlay {
@@ -107,7 +113,7 @@ body {
     bottom: 16px;
     right: 16px;
     display: flex;
-    gap: 12px;
+    gap: 35px;
 }
 
 .gallery__button {
@@ -149,10 +155,9 @@ body {
     object-fit: cover;
 }
 
-/* Только для 768px - 2 колонки */
 @media (min-width: 768px) and (max-width: 1023px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
     }
 }
 
