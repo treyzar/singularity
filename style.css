@@ -60,7 +60,6 @@ body {
     list-style-type: none;
     margin: 173px auto;
     max-width: 1060px;
-    padding: 0 16px;
     display: flex;
     flex-wrap: wrap;
     gap: 35px;
